@@ -49,7 +49,7 @@ namespace Regexp
 
         public static bool validPassword(string password)//UC5
         {
-            string pattern = "^[A-Za-z0-9]{8,25}$";
+            string pattern = "^[A-Za-z0-9@#$%^&+!=]{8,}$";
 
             Regex reg = new Regex(pattern);
 

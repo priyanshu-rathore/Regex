@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            string[] str = {"LetMeinSystem1",
+            string[] str = {"LetMeinSyste@m1",
           "P2345678", "abc.xyz@bl.co.in"};
 
             foreach (string s in str)
