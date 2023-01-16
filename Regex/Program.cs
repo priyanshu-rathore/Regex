@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            string[] str = {"Rathore",
-          "Thakur", "Singh"};
+            string[] str = {"priyanshu@gmail.com",
+          "Thakur", "abc.xyz@bl.co.in"};
 
             foreach (string s in str)
             {
-                Console.WriteLine("{0} {1} a valid Last Name.", s,
-                            RegularExpression.validation(s) ? "is" : "is not");
+                Console.WriteLine("{0} {1} a valid Email.", s,
+                            RegularExpression.validEmail(s) ? "is" : "is not");
             }
 
         }
