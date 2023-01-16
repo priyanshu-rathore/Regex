@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            string[] str = {"Priyanshu",
-          "Naveen", "Rupali"};
+            string[] str = {"Rathore",
+          "Thakur", "Singh"};
 
             foreach (string s in str)
             {
-                Console.WriteLine("{0} {1} a valid Name.", s,
+                Console.WriteLine("{0} {1} a valid Last Name.", s,
                             RegularExpression.validation(s) ? "is" : "is not");
             }
 
