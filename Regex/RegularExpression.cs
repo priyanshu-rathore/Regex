@@ -24,7 +24,7 @@ namespace Regexp
 
         public static bool validEmail(string email)//UC3
         {
-            string pattern = "^[a-z]{1,10}(.|)[a-z]{1,10}@[a-z]{1,10}(.|)[a-z]{1,10}(.|)[a-z]{1,10}$";
+            string pattern = "^[a-z0-9]{1,}(.|-|)[a-z0-9]{1,}@[a-z0-9]{1,}(.|)[a-z0-9]{1,}(.|)[a-z]{1,}$";
 
             Regex reg = new Regex(pattern);
 
