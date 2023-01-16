@@ -46,5 +46,18 @@ namespace Regexp
             else
                 return (false);
         }
+
+        public static bool validPassword(string password)//UC5
+        {
+            string pattern = "^[A-Za-z0-9]{8,25}$";
+
+            Regex reg = new Regex(pattern);
+
+            if (reg.IsMatch(password))
+                return (true);
+            else
+                return (false);
+
+        }
     }
 }
