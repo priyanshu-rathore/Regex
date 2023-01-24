@@ -12,26 +12,20 @@ namespace Regexp
     {
         public static bool Validate(string firstName, string lastName, string email, string mobile, string password)
         {
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(mobile) || string.IsNullOrEmpty(password))
-                return false;
-
-            if (!IsValidFirstName(firstName))
-                return false;
-
-            if (!IsValidLastName(lastName)) 
-                return false;
+            if (string.IsNullOrEmpty(firstName))
+                throw new InvalidUserDetailException("Invalid first name");
 
             if (string.IsNullOrEmpty(lastName))
-                return false;
+                throw new InvalidUserDetailException("Invalid last name");
 
             if (!IsValidEmail(email))
-                return false;
+                throw new InvalidUserDetailException("Invalid email address");
 
             if (!IsValidMobile(mobile))
-                return false;
+                throw new InvalidUserDetailException("Invalid mobile number");
 
             if (!IsValidPassword(password))
-                return false;
+                throw new InvalidUserDetailException("Invalid password");
 
             return true;
         }
@@ -94,6 +88,11 @@ namespace Regexp
                 return (true);
             else
                 return (false);
+        }
+
+        public class InvalidUserDetailException : Exception
+        {
+            public InvalidUserDetailException(string message) : base(message) { }
         }
     }
 
