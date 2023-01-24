@@ -60,9 +60,9 @@ namespace Regexp
                 return (false);
         }
 
-        private static bool IsValidEmail(string email)
+        public static bool IsValidEmail(string email)
         {
-            string pattern = "^[a-z0-9]{1,}(.|-|)[a-z0-9]{1,}@[a-z0-9]{1,}(.|)[a-z0-9]{1,}(.|)[a-z]{1,}$";
+            string pattern = "^[a-z0-9]{1,}(.|-|)[a-z0-9]{1,}@[a-z0-9]{1,}(.|)[a-z0-9]{1,}[.]{1}[a-z]{1,}$";
 
             Regex reg = new Regex(pattern);
 
